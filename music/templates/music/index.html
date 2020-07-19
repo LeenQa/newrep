@@ -1,7 +1,7 @@
 {% if album_list %}
 <h2>List of Albums: </h2>
 <ul>
-    {% for album in album_list %}
+    {% for album in object_list %}
     <li> <a href="{{ album.id }}">{{ album.album_title}}</a></li>
     {% endfor %}
 </ul>

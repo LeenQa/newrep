@@ -10,10 +10,19 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="{% url 'music:index' %}">LWWN</a>
         </div>
+
+        <!-- Items -->
+        <div class="nav navbar-nav navbar-right">
+            <li class="">
+                <a href="{% url 'music:album-add' %}">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp; Add Album
+                </a>
+            </li>
+        </div>
     </div>
 </nav>
 <!--album details-->
-<img src="{{ album.album_logo }}" alt="album logo" style="max-width:150">
+<img src="{{ album.album_logo.url }}" alt="album logo" style="max-width:150px">
 <h1> {{ album.album_title }}</h1>
 <h3>{{ album.artist }}</h3>
 
@@ -29,7 +38,7 @@
     <label for="song{{ forloop.counter }}">
         {{ song.song_title }}
         {% if song.is_favorite %}
-          <img src="https://i.ya-webdesign.com/images/black-heart-icon-png-1.png"  style="max-width:16">
+          <img src="https://i.ya-webdesign.com/images/black-heart-icon-png-1.png"  style="max-width:16px">
         {% endif %}
     </label><br>
 {% endfor %}

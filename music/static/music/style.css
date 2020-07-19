@@ -1,3 +1,7 @@
 body {
     background-image: linear-gradient(white,#ffe6e9,#ffccd4);
 }
+
+.thumbnail>img {
+    max-height: 100px;
+}
